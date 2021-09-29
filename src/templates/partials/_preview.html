@@ -1,0 +1,38 @@
+{% import "data/cars.html" as data %}
+
+<div class="pr">
+    <div class="pr__header">
+        <!-- begin title -->
+        <div class="pr__title">
+            <h2 class="js-pr-title"></h2>
+            <span class="js-pr-author"></span>
+        </div>
+        <!-- end title -->
+
+        <!-- begin likes -->
+        <div class="pr__likes">
+            <button class="btn btn_green">{{ mixins.icon('heart') }}</button>
+            <span class="js-pr-likes"></span>
+        </div>
+        <!-- end likes -->
+    </div>
+
+    <!-- begin sliders -->
+    <div class="pr__slider">
+        <div class="pr-slider js-pr-slider"></div>
+        <button class="btn btn_round pr__prev js-pr-prev">{{ mixins.icon('arrow') }}</button>
+        <button class="btn btn_round pr__next js-pr-next">{{ mixins.icon('arrow') }}</button>
+    </div>
+    <div class="pr-slider-mini js-pr-slider-mini"></div>
+    <!-- end sliders -->
+
+    <button class="btn btn_yellow">Download</button>
+
+    <!-- begin desc -->
+    <div class="pr__desc">
+        <p class="js-pr-desc"></p>
+    </div>
+    <!-- end desc -->
+
+
+</div>

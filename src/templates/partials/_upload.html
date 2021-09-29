@@ -1,0 +1,71 @@
+<div class="upload">
+    <h2>Upload project</h2>
+    <div class="upload__form">
+        <form action="">
+            <!-- begin input -->
+            <div class="input">
+                <label for="">
+                    <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                    Project Name
+                </label>
+                <input type="text">
+            </div>
+            <!-- end input -->
+
+            <!-- begin input -->
+            <div class="input">
+                <label for="">
+                    <svg class="icon icon-doc"><use xlink:href="#icon-doc"></use></svg>
+                    Descriptions
+                </label>
+                <input type="text">
+            </div>
+            <!-- end input -->
+
+            <!-- begin input -->
+            <div class="input">
+                <label for="">
+                    <svg class="icon icon-setting"><use xlink:href="#icon-setting"></use></svg>
+                    Technologies
+                </label>
+                <input type="text">
+            </div>
+            <!-- end input -->
+
+            <!-- begin input -->
+            <div class="input">
+                <label for="">
+                    <svg class="icon icon-globe"><use xlink:href="#icon-globe"></use></svg>
+                    URL
+                </label>
+                <input type="text">
+            </div>
+            <!-- end input -->
+
+            <!-- begin uploadbox -->
+            <div class="uploadbox">
+                <input type="file" accept=".png, .jpg, .jpeg">
+                <label for="" class="btn btn_form">
+                    {{ mixins.icon('img') }}
+                    <span>Upload image</span>
+                </label>
+            </div>
+            <!-- end uploadbox -->
+
+            <!-- begin uploadbox -->
+            <div class="uploadbox">
+                <input type="file">
+                <label for="" class="btn btn_form">
+                    {{ mixins.icon('file') }}
+                    <span>Upload other files</span>
+                </label>
+            </div>
+            <!-- end uploadbox -->
+
+            <div class="upload__btns">
+                <button class="btn btn_trans btn_bord js-popup-close">Cancel</button>
+                <button class="btn btn_yellow" type="submit">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>

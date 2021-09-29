@@ -1,0 +1,11 @@
+<ul class="boxes">
+    {% for box in data.boxes %}
+    <li class="box{%if box.upload%} js-popup-open{%endif%}"{%if box.upload%} data-target-popup="upload"{%endif%}>
+        <i class="box__icon">
+            {{ box.icon | safe }}
+        </i>
+        <h3>{{ box.title | safe }}</h3>
+        <p>{{ box.text | safe }}</p>
+    </li>
+    {% endfor %}
+</ul>

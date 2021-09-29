@@ -1,0 +1,54 @@
+{% import "data/contestPreview.html" as data %}
+
+<section class="section contest-preview" id="submit-design">
+    <div class="l">
+        <div class="contest-preview__head">
+            <!-- begin section title -->
+            <div class="section__title contest-preview__title">
+                <h2>Design Contest</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac fringilla lectus. <br />Etiam eu arcu auctor, luctus est eu, hendrerit turpis.</p>
+            </div>
+            <!-- end section title -->
+            <!-- begin section btns -->
+            <div class="contest-preview__btns">
+                <button class="btn btn_yellow" type="submit">Submit design</button>
+                <a href="/contest.html#cars" class="btn btn_link btn_semi-yellow">Show all</a>
+            </div>
+            <!-- end section btns -->
+        </div>
+
+        <div class="contest-preview__slider">
+            <div class="contest-preview__slider-in js-contest-preview">
+                {% for block in data.blocks %}
+                <div class="contest-preview__slide">
+                    <a href="" class="block">
+                        <!-- begin block image -->
+                        <div class="block__img">
+                            <img src="img/{{ block.image }}" alt="">
+                        </div>
+                        <!-- end block image -->
+                        <div class="block__in">
+                            <!-- begin block title -->
+                            <div class="block__title">
+                                <h4>{{ block.title }}</h4>
+                                <p>{{ block.subtitle }}</p>
+                            </div>
+                            <!-- end block title -->
+
+                            <!-- begin block likes -->
+                            <div class="block__likes">
+                                <button class="btn btn_green">{{ mixins.icon('heart') }}</button>
+                                <span>{{ block.likes }}</span>
+                            </div>
+                            <!-- end block likes -->
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="btn btn_round js-contest-preview-next">
+                {{ mixins.icon('arrow') }}
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,150 @@
+.header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	max-height: 88px
+	border-bottom: 1px solid transparentize($border-gray, .85)
+	+trans
+	+r($md)
+		background-color: #fff
+		max-height: 50px
+	&.is-fixed, &_white
+		background-color: #fff
+		.header__item
+			a
+				color: $common-gray
+				border-color: $green
+			&.is-active
+				a
+					color: $green
+					border-color: $green
+		.btn
+			color: $common-gray
+		.btn_bord
+			color: $green
+			border-color: $green
+	&__logo, &__menu, &__btns, &__nav
+		display: inline-block
+		vertical-align: middle
+	&__logo
+		width: percentage(140/1170)
+		text-align: left
+		height: 88px
+	&__nav
+		width: percentage(1030/1170)
+		text-align: right
+		font-size: 0
+		+r($md)
+			display: none
+			&.is-active
+				display: block
+				height: auto
+				width: 100vw
+				min-height: 100vh
+				position: absolute
+				right: 0
+				top: 50px
+				background-color: #fff
+				text-align: center
+				.header__menu
+					margin-bottom: 20px
+				.header__item
+					display: block
+					a
+						color: $green
+						display: inline-block
+						border-color: $green
+						padding: 15px 21px
+				.header__btns
+					display: block
+					width: 100%
+					text-align: center
+					margin: 0 auto
+					.btn
+						display: block
+						margin: 5px auto
+						color: $common-gray
+						width: 150px
+					.btn_bord
+						color: $green
+						border-color: $green
+
+
+	&__btns
+		width: percentage(220/1030)
+		max-width: 220px
+		.btn
+			padding: 14px 0
+			width: 50%
+			font-size: 12px
+			&.is-active
+				color: $green
+	&__menu
+		width: percentage(810/1030)
+		text-align: center
+
+
+	&__item
+		display: inline-block
+		vertical-align: bottom
+		a
+			text-decoration: none
+			color: #fff
+			font-size: 12px
+			display: block
+			padding: 32px 21px
+			text-transform: capitalize
+			letter-spacing: 0.3px
+			+trans
+			&:hover
+				opacity: .8
+		&.is-active
+			a
+				border-bottom: 2px solid #fff
+	&__icon
+		display: none
+		height: 100%
+		position: relative
+		+r($md)
+			display: block
+
+.nav-toggle
+	position: absolute
+	top: 50%
+	right: 20px
+	transform: translate(0, -50%)
+	width: 23px
+	height: 23px
+	display: none
+	padding: 0
+	+r($md)
+		display: block
+	span
+		display: block
+		width: 100%
+		height: 2px
+		border-radius: 6px
+		+trans
+		position: absolute
+		background-color: transparentize($green, .2)
+	span:nth-child(1)
+		top: 0
+		transform-origin: left center
+	span:nth-child(2)
+		top: 8px
+		transform-origin: left center
+	span:nth-child(3)
+		top: 16px
+		transform-origin: left center
+	&.is-open
+		span:nth-child(1)
+			transform: rotate(45deg)
+			top: 0
+		span:nth-child(2)
+			width: 0
+			opacity: 0
+		span:nth-child(3)
+			transform: rotate(-45deg)
+			top: 16px

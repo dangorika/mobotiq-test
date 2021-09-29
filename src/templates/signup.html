@@ -1,0 +1,64 @@
+---
+title: Sing-up
+signup: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main">
+        <section class="section form-page">
+            <div class="bg" style="background-image: url('img/bg-sign-up.jpg')"></div>
+            <div class="l">
+                <div class="form-box">
+                    <h2 class="form-box__title">Sign up</h2>
+                    <form action="">
+                        <!-- begin input -->
+                        <div class="input js-input">
+                            <input type="text" placeholder="Your name">
+                            {{ mixins.icon('person') }}
+                        </div>
+                        <!-- end input -->
+
+                        <!-- begin input -->
+                        <div class="input js-input">
+                            <input type="email" placeholder="Email">
+                            {{ mixins.icon('mail') }}
+                        </div>
+                        <!-- end input -->
+
+                        <!-- begin input -->
+                        <div class="input js-input">
+                            <input type="password" placeholder="Password">
+                            {{ mixins.icon('lock') }}
+                        </div>
+                        <!-- end input -->
+
+                        <!-- begin input -->
+                        <div class="input js-input">
+                            <input type="password" placeholder="Confirm password">
+                            {{ mixins.icon('lock') }}
+                        </div>
+                        <!-- end input -->
+
+                        <div class="form-box__btns">
+                            <a href="" class="btn btn_form">
+                                <span>Sign up with</span>
+                                {{ mixins.icon('github') }}
+                            </a>
+                            <a href="" class="btn btn_form">
+                                <span>Sign up with</span>
+                                {{ mixins.icon('twitter') }}
+                            </a>
+                        </div>
+
+                        <div class="btn btn_yellow" type="submit">Submit</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

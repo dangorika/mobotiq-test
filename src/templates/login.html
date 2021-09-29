@@ -1,0 +1,59 @@
+---
+title: Log-in
+login: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main">
+        <section class="section form-page">
+            <div class="bg" style="background-image: url('img/bg-log-in.jpg')"></div>
+            <div class="l">
+                <div class="form-box">
+                    <h2 class="form-box__title">Log in</h2>
+                    <form action="">
+                        <!-- begin input -->
+                        <div class="input js-input is-invalid">
+                            <input type="email" placeholder="Email">
+                            {{ mixins.icon('mail') }}
+                        </div>
+                        <!-- end input -->
+
+                        <!-- begin input -->
+                        <div class="input js-input">
+                            <input type="password" placeholder="Password">
+                            {{ mixins.icon('lock') }}
+                        </div>
+                        <!-- end input -->
+
+                        <!-- begin checkbox -->
+                        <div class="checkbox">
+                          <input type="checkbox">
+                          <label for="">Remember me</label>
+                        </div>
+                        <!-- begin checkbox -->
+
+                        <div class="form-box__btns">
+                            <a href="" class="btn btn_form">
+                                <span>Log in with</span>
+                                {{ mixins.icon('github') }}
+                            </a>
+                            <a href="" class="btn btn_form">
+                                <span>Log in with</span>
+                                {{ mixins.icon('twitter') }}
+                            </a>
+                        </div>
+
+                        <div class="btn btn_yellow" type="submit">Log in</div>
+
+                        <a href="" class="form-box__forgot">Forgot your password?</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

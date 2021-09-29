@@ -1,0 +1,51 @@
+---
+title: Contest
+contest: true
+hero: 'contest-hero-bg.jpg'
+heroTitle: 'Design Contest'
+heroMessage: 'Submit your design for the electric car of the future.'
+---
+{% extends "layouts/_layout.html" %}
+
+{% import "data/conditions.html" as data %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main">
+        {% include "partials/_hero.html" %}
+
+        <!-- begin services -->
+        <section class="section cond">
+            <div class="l">
+            {% include "partials/_boxes.html" %}
+            </div>
+        </section>
+        <!-- end services -->
+
+        {% include "partials/_e-car.html" %}
+        {% include "partials/_subscribe.html" %}
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+    <!-- begin popup -->
+    <div class="popup" data-popup="upload">
+        <div class="popup__overlay js-popup-close"></div>
+        <div class="popup__box js-popup">
+            {% include "partials/_upload.html" %}
+        </div>
+    </div>
+    <!-- end popup -->
+
+    <!-- begin popup -->
+    <div class="popup" data-popup="preview">
+        <div class="popup__overlay js-popup-close"></div>
+        <div class="popup__box popup__box_pr js-popup">
+            {% include "partials/_preview.html" %}
+        </div>
+    </div>
+    <!-- end popup -->
+
+{% endblock %}

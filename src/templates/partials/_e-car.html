@@ -1,0 +1,40 @@
+{% import "data/cars.html" as data %}
+
+<section class="section e-car" id="cars">
+    <div class="l">
+        <div class="section__title section__title_sm">
+            {{ mixins.icon('testimonial') }}
+            <h3>The Contest lorem <br />ipsum</h3>
+        </div>
+        <div class="js-paginator">
+            <div class="e-car__list">
+                {% for car in data.cars %}
+                <a href="" class="block js-block js-popup-open" data-target-popup="preview" data-title="{{ car.title }}" data-author="{{ car.popup.author }}" data-likes="{{ car.likes }}" data-images="{{ car.popup.images }}" data-desc="{{ car.popup.desc }}">
+                    <!-- begin block image -->
+                    <div class="block__img">
+                        <img src="img/{{ car.image }}" alt="">
+                    </div>
+                    <!-- end block image -->
+                    <div class="block__in">
+                        <!-- begin block title -->
+                        <div class="block__title">
+                            <h4>{{ car.title }}</h4>
+                            <p>{{ car.subtitle }}</p>
+                        </div>
+                        <!-- end block title -->
+
+                        <!-- begin block likes -->
+                        <div class="block__likes">
+                            <button class="btn btn_green">{{ mixins.icon('heart') }}</button>
+                            <span>{{ car.likes }}</span>
+                        </div>
+                        <!-- end block likes -->
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="bg bg_left" style="background-image: url('img/bg-shape-2.png')"></div>
+    <div class="bg bg_right" style="background-image: url('img/bg-shape-2.png')"></div>
+</section>

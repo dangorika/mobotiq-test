@@ -1,0 +1,37 @@
+.boxes
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+.box
+	display: inline-block
+	vertical-align: middle
+	width: percentage(313/1170)
+	font-size: 16px
+	line-height: 1.875
+	text-align: center
+	text-align-last: auto
+	+r($md)
+		display: block
+		width: 100%
+		margin-bottom: 50px
+		text-align: left
+	&__icon
+		min-height: 100px
+		display: block
+		position: relative
+		margin-bottom: 8px
+		svg
+			+vcenter
+			+r($md)
+				left: 50px
+				transform: translateX(none)
+	h3
+		+sf-ns
+		font-size: 22px
+		line-height: 2
+		margin-bottom: 6px
+		color: $title-black
+	&[data-target-popup="upload"]
+		cursor: pointer
+
+

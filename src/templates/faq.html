@@ -1,0 +1,57 @@
+---
+title: Faq
+faq: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% import "data/faq.html" as data %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main main_lowered">
+
+        <section class="section faq">
+            <div class="l">
+                <!-- begin section title -->
+                <div class="section__title faq__title">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <!-- end section title -->
+
+                <!-- begin faq in -->
+                <div class="faq__in">
+                    {% for part in data.faq %}
+                    <h3>{{ part.title }}</h3>
+                    <ul class="faq__list">
+                        {% for item in part.list %}
+                        <li class="faq__item">
+                            <div class="q js-accord-toggle">
+                                <div class="q__title">
+                                    <h4>{{ item.question | safe }}</h4>
+                                    <button class="btn btn_green q__btn">
+                                        {{ mixins.icon('arrowhead') }}
+                                    </button>
+                                </div>
+                                <div class="q__answer js-dropdown">
+                                    <p>{{ item.answer | safe }}</p>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor%}
+                    </ul>
+                    {% endfor%}
+                </div>
+                <!-- end faq in -->
+            </div>
+            <div class="bg bg_left" style="background-image: url('img/bg-shape-2.png')"></div>
+            <div class="bg bg_right" style="background-image: url('img/bg-shape-2.png')"></div>
+        </section>
+
+        {% include "partials/_subscribe.html" %}
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% import "data/social.html" as data %}
+
+<section class="section social">
+    <div class="l">
+        <ul class="social__icons ">
+            {% for icon in data.icons %}
+            <li class="social__icon social__icon_{{ icon.mod }} {{ icon.pos }}">
+                <a href="">
+                    <img src="img/social/{{ icon.image }}.jpg" alt="">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="bg bg_left" style="background-image: url('img/bg-shape-2.png')"></div>
+    <div class="bg bg_right" style="background-image: url('img/bg-shape-2.png')"></div>
+</section>

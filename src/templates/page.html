@@ -1,0 +1,39 @@
+---
+title: About
+about: true
+hero: 'about-hero-bg.jpg'
+heroTitle: 'The First P2P Mobility Operator'
+heroMessage: 'Vinyl retro umami meditation tacos. Yuccie cred subway tile helvetica.'
+---
+{% extends "layouts/_layout.html" %}
+
+{% import "data/services.html" as data %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main">
+        {% include "partials/_hero.html" %}
+
+        <!-- begin services -->
+        <section class="section services" id="services">
+            <div class="l">
+            {% include "partials/_boxes.html" %}
+            </div>
+        </section>
+        <!-- end services -->
+
+        {% include "partials/_contest-preview.html" %}
+        {% include "partials/_media.html" %}
+        {% include "partials/_token.html" %}
+        {% include "partials/_team.html" %}
+        {% include "partials/_social.html" %}
+        {% include "partials/_subscribe.html" %}
+    </main>
+
+    <!-- test comment -->
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

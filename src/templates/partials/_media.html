@@ -1,0 +1,35 @@
+{% import "data/media.html" as data %}
+
+<section class="section media" id="media">
+  <div class="l">
+    <div class="section__title section__title_sm">
+        {{ mixins.icon('testimonial') }}
+        <h3>Media mentioned us</h3>
+    </div>
+
+    <div class="media__slider js-mini-tabs">
+        <!-- begin blocks -->
+        <div class="media__blocks">
+            {% for block in data.blocks %}
+            <a href="" class="block js-block" data-block="{{ loop.index }}">
+                <div class="block__quote">
+                    <q>{{ block.quote | safe }}</q>
+                </div>
+                <div class="block__logo">
+                    <img src="img/{{ block.logo }}" alt="">
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <!-- end blocks -->
+
+        <!-- begin dots -->
+        <div class="media__dots">
+            {% for block in data.blocks %}
+            <div class="dot js-dot" data-target-block="{{ loop.index }}"></div>
+            {% endfor %}
+        </div>
+        <!-- end dots -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,105 @@
+.btn
+	display: inline-block
+	vertical-align: middle
+	border-radius: 10px
+	padding: 20px 0
+	appearance: none
+	font-size: 14px
+	letter-spacing: 0.3px
+	cursor: pointer
+	+sf
+	+trans
+	+r($md)
+		padding: 15px 0
+	&_link
+		text-decoration: none
+		text-align: center
+		line-height: 1
+	&_trans
+		background-color: transparent
+		color: #fff
+		&:hover
+			opacity: .8
+	&_bord
+		border: 1px solid rgba(255,255,255,.3)
+	&_white
+		background-color: #fff
+		color: $yellow
+	&_yellow
+		background-color: $yellow
+		color: #fff
+		&:hover
+			background-color: transparentize($yellow, .2)
+	&_semi-yellow
+		background-color: transparentize($yellow, .9)
+		color: $yellow
+		&:hover
+			background-color: transparentize($yellow, .8)
+	&_shadow
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+	&_text-shadow
+		text-shadow: 3px 3px 2px rgba(150, 150, 150, 1)
+	&_round
+		background-color: #fff
+		border-radius: 50%
+		box-shadow: 0 2px 4px rgba(162, 170, 183, 0.4)
+		width: 52px
+		height: 52px
+		padding: 0
+		.icon-arrowhead
+			+vcenter
+			width: 12px
+			height: 7px
+		.icon-arrow
+			+vcenter
+
+	&_green
+		background-color: transparentize($green, .8)
+		width: 36px
+		height: 36px
+		border-radius: 50%
+		position: relative
+		padding: 0
+		.icon-heart
+			+vcenter
+			width: 12px
+			height: 12px
+			transform-origin: 50% 50%
+		.icon-arrowhead
+			position: relative
+			bottom: 1px
+			width: 12px
+			height: 7px
+		&:hover
+			background-color: transparentize($green, .7)
+
+	&_form
+		background-color: transparentize($text-green, .9)
+		line-height: 1
+		color: $text-green
+		padding: 14px 0
+		display: block
+		position: relative
+		text-decoration: none
+		+trans
+		+r($md)
+			padding: 10px 0
+		&:hover
+			background-color: transparentize($text-green, .8)
+		.icon
+			position: absolute
+			right: percentage(14/173)
+			top: 50%
+			transform: translate(0, -50%)
+		.icon-github
+			width: 23px
+			height: 23px
+		.icon-twitter
+			width: 21px
+			height: 17px
+		span
+			position: relative
+			left: -4px
+			letter-spacing: normal
+
+

@@ -1,0 +1,23 @@
+{% import "data/team.html" as data %}
+
+<section class="section team">
+    <div class="l">
+        <div class="section__title section__title_sm">
+            {{ mixins.icon('team') }}
+            <h3>Meet our team</h3>
+        </div>
+        <ul class="team__list">
+            {% for person in data.people %}
+            <li class="person">
+                <!-- begin photo -->
+                <div class="person__photo">
+                    <img src="img/{{ person.photo }}" alt="">
+                </div>
+                <!-- end photo -->
+                <h4>{{ person.name | safe }}</h4>
+                <p>{{ person.desc | safe }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

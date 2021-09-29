@@ -1,0 +1,35 @@
+.footer
+	padding-bottom: 81px
+	&__copyright, &__menu
+		display: inline-block
+		vertical-align: middle
+		+r($md)
+			vertical-align: top
+	&__copyright
+		font-size: 12px
+		color: transparentize($footer-gray, .15)
+		letter-spacing: 0.3px
+		width: 35%
+
+
+	&__menu
+		text-align: right
+		width: 65%
+	&__item
+		display: inline-block
+		vertical-align: middle
+		+r($md)
+			display: block
+			margin-bottom: 15px
+		a
+			text-decoration: none
+			color: $footer-gray
+			font-size: 12px
+			text-transform: capitalize
+			padding: 10px
+			margin-left: 18px
+			letter-spacing: 0.3px
+			+trans
+			&:hover
+				opacity: .7
+

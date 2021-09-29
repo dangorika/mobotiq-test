@@ -1,0 +1,36 @@
+<header class="header{%if faq or signup or login%} header_white{%endif%}">
+    <div class="l l-center">
+        <!-- begin header logo -->
+        <div class="header__logo">
+            <!-- <img src="" alt="" class="logo"> -->
+        </div>
+        <!-- end header logo -->
+
+        <div class="header__nav js-nav-dropdown">
+          <!-- begin header menu -->
+          <ul class="header__menu">
+              <li class="header__item{%if about %} is-active{%endif%}"><a href="/page.html">About</a></li>
+              <li class="header__item{%if contest %} is-active{%endif%}"><a href="/contest.html">Contest</a></li>
+              <li class="header__item"><a href="#token">Token</a></li>
+              <li class="header__item"><a href="#media">Media</a></li>
+              <li class="header__item{%if faq %} is-active{%endif%}"><a href="/faq.html">Faq</a></li>
+              <li class="header__item"><a href="#">Contact us</a></li>
+          </ul>
+          <!-- end header menu -->
+
+          <!-- begin header buttons -->
+          <div class="header__btns js-nav-dropdown">
+              <a href="/signup.html" class="header__btn btn btn_trans btn_bord btn_link{%if signup %} is-active{%endif%}">Register</a>
+              <a href="/login.html" class="header__btn btn btn_trans btn_link{%if login %} is-active{%endif%}">Log in</a>
+          </div>
+          <!-- end header buttons -->
+        </div>
+    </div>
+
+    <button class="btn btn_trans nav-toggle js-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>

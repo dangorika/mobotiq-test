@@ -1,0 +1,433 @@
+.section
+	+r($md)
+		margin-bottom: 50px
+	&__title
+		h2
+			+sf-ns
+			color: $title-black
+			font-weight: normal
+			font-size: 36px
+			line-height: 1.22
+			margin-bottom: 20px
+		&_sm
+			text-align: center
+			margin-bottom: 57px
+			h3
+				+sf-ns
+				color: $title-black
+				font-size: 22px
+				line-height: 2
+			.icon-testimonial
+				transform: rotate(180deg)
+				width: 18px
+				height: 14px
+			.icon-team
+				width: 27px
+				height: 17px
+		&_center
+			text-align: center
+.services
+	margin-top: 145px
+	margin-bottom: 202px
+
+.contest-preview
+	overflow-x: hidden
+	margin-bottom: 198px
+	&__head
+		+clr
+		margin-bottom: 55px
+	&__title
+		float: left
+		width: percentage(682/1170)
+		+r($sm)
+			float: none
+			width: 100%
+	&__btns
+		float: right
+		width: percentage(345/1170)
+		padding-top: 39px
+		text-align: right
+		+justify
+		+r($md)
+			padding-top: 20px
+		+r($sm)
+			float: none
+			width: 100%
+			text-align: left
+		.btn
+			line-height: 1
+			text-align: center
+			text-align-last: auto
+			+r($md)
+				display: block
+				margin-bottom: 10px
+				width: 175px
+				margin-left: auto
+			+r($sm)
+				margin-right: 10px
+				display: inline-block
+
+		.btn_yellow
+			width: percentage(175/345)
+		.btn_semi-yellow
+			width: percentage(151/345)
+	&__slider
+		position: relative
+		&-in
+			.slick-list
+				min-width: 1800px
+				padding-bottom: 50px
+				// padding-left: 26px
+				// position: relative
+				// left: -26px
+			.slick-prev
+				font-size: 0
+				position: absolute
+				z-index: -1
+				height: 0
+			.slick-dots
+				display: flex
+				justify-content: space-between
+				margin-top: 84px
+				li
+					width: 100 / 5 + %
+					button
+						font-size: 0
+						width: 100%
+						height: 1px
+						background-color: $border-gray
+					&.slick-active
+						button
+							height: 2px
+							background-color: $green
+		.btn_round
+			position: absolute
+			top: 125px
+			left: -26px
+			+r($sm)
+				left: -13px
+			&:hover
+				transform: translateX(-2px)
+				box-shadow: 0 4px 10px rgba(162, 170, 183, 0.6)
+			&:active
+				transform: translateX(0)
+				box-shadow: 0 2px 4px rgba(162, 170, 183, 0.4)
+	&__slide
+		margin-right: 48px
+		.block
+			min-width: 317px
+			width: 100%
+			+r($xs)
+				max-width: 280px
+				min-width: auto
+
+
+.media
+	margin-bottom: 304px
+	&__slider
+		position: relative
+	&__blocks
+		//+justify
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 70px
+
+		.block
+			display: inline-block
+			vertical-align: middle
+			width: percentage(352/1170)
+			padding: 44px 41px
+			//min-height: 290px
+			+r($md)
+				width: 90%
+				padding: 20px
+				margin-bottom: 20px
+	&__dots
+		text-align: center
+		+r($md)
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translate(0, -50%)
+			.dot
+				display: block
+				margin: 20px auto
+
+
+.token
+	position: relative
+	margin-bottom: 201px
+	&__items
+		max-width: 500px
+		margin-bottom: 45px
+		+r($md)
+			max-width: 100%
+	&__item
+		font-size: 16px
+		margin-bottom: 17px
+		h3
+			color: transparentize($title-black, .15)
+			font-size: 16px
+	&__pic
+		width: percentage(414/625)
+		height: 0
+		padding-top: 65%
+		padding-left: 20px
+		position: relative
+		margin-left: auto
+		right: 76px
+		+r($md)
+			display: none
+
+
+	&__img
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: contain
+		+coverdiv
+	.btn_yellow
+		width: 203px
+	.bg
+		right: 0
+		top: -10px
+		width: 45%
+		height: 600px
+.team
+	margin-bottom: 166px
+	+r($md)
+		margin-bottom: 0
+	&__list
+		padding: 17px 0
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+.person
+	width: percentage(335/1170)
+	margin-bottom: 104px
+	+r($md)
+		width: 46%
+	+r($sm)
+		width: 100%
+		text-align: center
+
+	&__photo
+		border-radius: 50%
+		width: 80px
+		height: 80px
+		overflow: hidden
+		position: relative
+		box-shadow: 0 20px 50px rgba(164, 176, 189, 0.37)
+		margin-bottom: 20px
+		+r($sm)
+			margin: 0 auto
+		img
+			height: 100%
+			+vcenter
+	h4
+		+sf-ns
+		color: $green
+		font-size: 22px
+		font-weight: normal
+		line-height: 2
+		margin-bottom: 6px
+
+.social
+	position: relative
+	margin-bottom: 300px
+	overflow: hidden
+	padding: 50px 0
+	.bg
+		width: 50%
+		height: 350px
+		&_left
+			bottom: 10%
+			transform: rotate(-45deg)
+			left: -25%
+		&_right
+			bottom: 20%
+			right: -20%
+			transform: rotate(-45deg)
+	&__icons
+		position: relative
+		height: 345px
+	&__icon
+		position: absolute
+		a
+			border-radius: 50%
+			background-color: #fff
+			box-shadow: 0 20px 50px rgba(164, 176, 189, 0.37)
+			border: 1px solid $border-gray
+			display: block
+			position: relative
+			img
+				+vcenter
+				max-width: 80%
+				max-height: 80%
+				+r(490)
+					max-width: 60%
+					max-height: 60%
+		&_linkedin, &_slack, &_twitter
+			a
+				width: 99px
+				height: 99px
+				+r(490)
+					width: 80px
+					height: 80px
+				+r(360)
+					width: 75px
+					height: 75px
+		&_linkedin
+			top: 41px
+			left: percentage(67/1170)
+			+r(490)
+				left: 0
+		&_slack
+				bottom: 25px
+				left: percentage(440/1170)
+		&_twitter
+			bottom: 43px
+			right: 0
+			+r($sm)
+				bottom: 100px
+			+r(360)
+				bottom: 120px
+		&_vimeo
+			left: 0
+			bottom: 0
+			a
+				width: 91px
+				height: 91px
+				+r(490)
+					width: 76px
+					height: 76px
+				+r(360)
+					width: 68px
+					height: 68px
+		&_pinterest, &_github
+			a
+				width: 83px
+				height: 83px
+				+r(490)
+					width: 70px
+					height: 70px
+				+r(360)
+					width: 60px
+					height: 60px
+		&_github
+			top: 0
+			left: percentage(428/1170)
+		&_pinterest
+			top: 12px
+			right: percentage(131/1170)
+			+r(490)
+				right: 0
+
+		&_facebook, &_instagram, &_youtube
+			a
+				width: 76px
+				height: 76px
+				+r(490)
+					width: 64px
+					height: 64px
+				+r(360)
+					width: 56px
+					height: 56px
+		&_youtube
+			top: 148px
+			left: percentage(256/1170)
+			+r($sm)
+				left: percentage(210/1170)
+			+r(490)
+				left: percentage(60/1170)
+			+r(360)
+				top: 160px
+		&_facebook
+			top: 87px
+			right: percentage(425/1170)
+			+r($sm)
+				top: 120px
+		&_instagram
+			bottom: 45px
+			right: percentage(258/1170)
+			+r($sm)
+				bottom: 0
+				right: percentage(150/1170)
+			+r(490)
+				right: 0
+
+.cond
+	margin-bottom: 198 - 122px
+	position: relative
+	top: -122px
+
+	+r($md)
+		margin-bottom: 0
+	.box
+		padding: 56px 41px
+		width: percentage(352/1170)
+		box-shadow: 0 20px 50px rgba(164, 176, 189, 0.37)
+		border-radius: 5px
+		border: 1px solid $border-gray
+		background-color: #fff
+		+r($md)
+			width: 100%
+	.box__icon
+		svg
+			+r($md)
+				left: 30px
+.e-car
+	position: relative
+	margin-bottom: 128px
+	padding-bottom: 20px
+	overflow: hidden
+	&__list
+		// display: flex
+		// justify-content: space-between
+		// flex-wrap: wrap
+		+justify
+		min-height: 1140px
+		margin-bottom: 70px
+	.block
+		width: percentage(261/1170)
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 36px
+		+r(1130)
+			width: 30%
+		+r($md)
+			width: 46%
+		+r($sm)
+			width: 100%
+		&__in
+			padding: 30px 20px
+		&__title
+			width: 65%
+			h4
+				font-size: 16px
+			p
+				font-size: 12px
+		&__likes
+			width: 35%
+			padding-left: 1%
+			font-size: 12px
+	.btn_like
+		width: 30px
+		height: 30px
+
+		.icon-heart
+			width: 10px
+			height: 9px
+
+	.bg
+		width: 50%
+		height: 550px
+		&_left
+			top: 0
+			transform: rotate(-55deg)
+			left: -25%
+		&_right
+			top: 0
+			right: -20%
+			transform: rotate(-75deg)
+
